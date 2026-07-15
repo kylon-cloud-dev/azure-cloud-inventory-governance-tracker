@@ -1,6 +1,6 @@
 """Unit tests for Azure governance checks."""
 
-from function_app.governance import evaluate_inventory, summarize_findings
+from scanner.governance import evaluate_inventory, summarize_findings
 
 
 def test_detects_demo_governance_findings() -> None:

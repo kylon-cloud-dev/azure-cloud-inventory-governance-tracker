@@ -24,14 +24,14 @@ jobs:
           python-version: "3.12"
           cache: pip
           cache-dependency-path: |
-            function_app/requirements.txt
+            scanner/requirements.txt
             requirements-dev.txt
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install \
-            -r function_app/requirements.txt \
+            -r scanner/requirements.txt \
             -r requirements-dev.txt
 
       - name: Run governance unit tests
@@ -45,7 +45,7 @@ jobs:
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
       - name: Run Azure inventory scan
-        working-directory: function_app
+        working-directory: scanner
         env:
           TARGET_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           REPORT_STORAGE_ACCOUNT_URL: ${{ vars.REPORT_STORAGE_ACCOUNT_URL }}
