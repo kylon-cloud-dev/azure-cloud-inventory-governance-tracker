@@ -1,0 +1,16 @@
+// Subscription-wide resource inventory query.
+// The Python scanner executes this query through Azure Resource Graph.
+
+Resources
+| project
+    id,
+    name,
+    type,
+    resourceGroup,
+    subscriptionId,
+    location,
+    tags,
+    sku,
+    kind,
+    properties
+| order by id asc

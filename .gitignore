@@ -1,0 +1,40 @@
+# Terraform working files
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform variable files
+terraform.tfvars
+*.auto.tfvars
+
+# Keep Terraform provider lock file tracked
+!.terraform.lock.hcl
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.python_packages/
+
+# Azure Functions local settings
+local.settings.json
+
+# Generated reports
+reports/
+scan-result.json
+
+# Deployment packages
+*.zip
+
+# Editor and operating system
+.vscode/
+.DS_Store

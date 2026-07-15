@@ -1,0 +1,5 @@
+location             = "eastus"
+name_prefix          = "cigtkylon"
+environment          = "lab"
+enable_demo_findings = true
+function_location = "centralus"
