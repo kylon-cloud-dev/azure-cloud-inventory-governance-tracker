@@ -2,8 +2,7 @@ name: Azure Inventory Governance Scan
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 12 * * *"
+
 
 permissions:
   id-token: write
